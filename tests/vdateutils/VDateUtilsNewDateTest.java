@@ -1,10 +1,12 @@
+package vdateutils;
+
 import br.com.Ventron.Utils.VDateUtils;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.Calendar;
 
-public class VDocumentUtilsTest {
+public class VDateUtilsNewDateTest {
 
     @Test
     public void testarDiaNovaData(){

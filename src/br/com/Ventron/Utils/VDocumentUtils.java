@@ -13,11 +13,12 @@ public class VDocumentUtils {
      * @return True, se a placa for válida. Falso, caso a placa não seja válida
      */
     public static boolean isValidCarPlate(String carPlate){
-        carPlate = StringUtils.trimWhitespace(carPlate);
-        if(carPlate == null || carPlate.length() < 6 || carPlate.length() > 7)
+        if(carPlate == null)
             return false;
-
+        carPlate = StringUtils.trimWhitespace(carPlate);
         carPlate = carPlate.replaceAll("-","");
+        if(carPlate.length() < 6 || carPlate.length() > 7)
+            return false;
         List<String> patternsCarPlate = new ArrayList<>();
         patternsCarPlate.add("[a-zA-Z]{3}[0-9]{4}");
         patternsCarPlate.add("[a-zA-Z]{3}[0-9]{3}");
